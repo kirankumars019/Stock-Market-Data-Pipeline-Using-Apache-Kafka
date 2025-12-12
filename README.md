@@ -2,6 +2,18 @@
 This Project contains a complete data engineering pipeline that ingests and processes stock market data using Apache Kafka and Python. The project simulates streaming-style data flow, where stock data is published to Kafka topics and consumed for further processing, analysis, or storage.
 
 
+Technology Used
+Programming Language - Python
+Amazon Web Service (AWS)
+
+  1.Apache Kafka
+  2.S3 (Simple Storage Service)
+  3.Athena
+  4.Glue Crawler
+  5.Glue Catalog
+  6.EC2
+
+
 Project Overview
 This project demonstrates how to:
 
