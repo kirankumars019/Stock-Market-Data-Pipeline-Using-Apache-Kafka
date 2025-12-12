@@ -2,19 +2,27 @@
 This Project contains a complete data engineering pipeline that ingests and processes stock market data using Apache Kafka and Python. The project simulates streaming-style data flow, where stock data is published to Kafka topics and consumed for further processing, analysis, or storage.
 
 
-Technology Used
-Programming Language - Python
-Amazon Web Service (AWS)
 
-  1.Apache Kafka
-  2.S3 (Simple Storage Service)
-  3.Athena
-  4.Glue Crawler
-  5.Glue Catalog
-  6.EC2
+## **Technology Used**
 
+Programming Language-Python
 
-Project Overview
+Amazon Web Services (AWS)
+
+1. Apache Kafka
+
+2. S3 (Simple Storage Service)
+
+3. Athena
+
+4. Glue Crawler
+
+5. Glue Catalog
+
+6. EC2
+
+## **Project Overview**
+
 This project demonstrates how to:
 
   1. Publish stock market records to a Kafka topic using a Python producer.
@@ -24,7 +32,7 @@ This project demonstrates how to:
   5. Optionally integrate AWS EC2, Glue, Athena, and S3 for extended ETL and reporting.
 
 
-Architecture:
+## **Architecture**
 
   The project follows a classic producer → Kafka broker → consumer structure:
 
@@ -32,7 +40,7 @@ Architecture:
 
   Extensions can include storing consumer output in S3 and querying with Athena.
 
-Key Features:
+## **Key Features**
 
   1. Clean ingestion pipeline using Kafka
   2. Resilient consumer with safe deserialization
