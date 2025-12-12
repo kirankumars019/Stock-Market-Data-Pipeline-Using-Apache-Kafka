@@ -12,7 +12,7 @@ This project demonstrates how to:
   5. Optionally integrate AWS EC2, Glue, Athena, and S3 for extended ETL and reporting.
 
 
-Architecture
+Architecture:
 
   The project follows a classic producer → Kafka broker → consumer structure:
 
@@ -20,10 +20,10 @@ Architecture
 
   Extensions can include storing consumer output in S3 and querying with Athena.
 
-Key Features
+Key Features:
 
-  Clean ingestion pipeline using Kafka
-  •	 Resilient consumer with safe deserialization
-  •	 Easy setup on AWS EC2 or local Kafka
-  •	 Beginner-friendly code structure
-  •	Ready for extension into full ETL or analytics workflows
+  1. Clean ingestion pipeline using Kafka
+  2. Resilient consumer with safe deserialization
+  3. Easy setup on AWS EC2 or local Kafka
+  4. Beginner-friendly code structure
+  5. Ready for extension into full ETL or analytics workflows
