@@ -1,0 +1,38 @@
+
+--installl kafka on EC2
+wget https://downloads.apache.org/kafka/3.3.1/kafka_2.12-3.3.1.tgz
+tar -xvf kafka_2.12-3.3.1.tgz
+
+---java install 
+java -version
+sudo yum install java-1.8.0-openjdk
+
+----.pem file key path
+cd "C:\Users\DELL\Documents\DataPipeline_Projects\Stock_Market_6"
+
+
+---permission for ssh to run & start ssh
+icacls "kafka-stock-market-projects-6.pem" /inheritance:r
+icacls "kafka-stock-market-projects-6.pem" /grant:r "$($env:USERNAME):(R)"
+
+----connect to EC2
+ssh -i "kafka-stock-market-projects-6.pem" ec2-user@ec2-54-91-216-170.compute-1.amazonaws.com
+cd kafka_2.12-3.3.1
+	
+-----start zookeeper
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+-----start kafka & increase memory
+export KAFKA_HEAP_OPTS="-Xmx256M -Xms128M"
+bin/kafka-server-start.sh config/server.properties
+
+--------create topic demo_testing_6 
+bin/kafka-topics.sh --create --topic demo_testing_6 --bootstrap-server 54.91.216.170:9092 --replication-factor 1 --partitions 1
+
+------------Start Producer
+bin/kafka-console-producer.sh --topic demo_testing_6 --bootstrap-server 54.91.216.170:9092
+
+--------------Start Consumer
+bin/kafka-console-consumer.sh --topic demo_testing_6 --bootstrap-server 54.91.216.170:9092
+
+
